@@ -9,6 +9,7 @@ import interfaces.IQueue;
 public class DoubleStackQueue implements IQueue {
 
     //when pop from top of firstStack, secondStack will be reverse of it
+    //use firstStack as actual storage, secondStack will be used when dequeueing
     private DoubleStack doubleStack;
     private Stack firstStack;
     private Stack secondStack;

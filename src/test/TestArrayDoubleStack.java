@@ -135,10 +135,10 @@ public class TestArrayDoubleStack extends AbstractFactoryClient {
         assertEquals(12, secondStack.top());
 
         secondStack.clear();
-        firstStack.push(null);
-        //Shared array: [666,null(pushed|top),null,null,null,null,null,null,null]
+        firstStack.push('e');//different data types
+        //Shared array: [666,'e'(top),null,null,null,null,null,null,null]
         assertEquals(2, firstStack.size());
-        assertNull(firstStack.top());
+        assertEquals('e', firstStack.top());
         assertTrue(secondStack.isEmpty());
     }
 
